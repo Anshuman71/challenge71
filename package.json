@@ -17,10 +17,9 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-pivot": "^3.0.0",
-    "sheetify": "^6.1.0"
-  },
-  "devDependencies": {
+    "sheetify": "^6.1.0",
     "budo": "^10.0.4",
     "standard": "^10.0.2"
-  }
+  },
+  "devDependencies": {}
 }
