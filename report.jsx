@@ -15,15 +15,16 @@ var dimensions = [
   },
 ];
 
-var reduce = function(row, memo) {
-  memo.impressions =
-    (memo.impressions || 0) + parseInt(row['type'] === 'impression' ? 1 : 0);
-  memo.loads = (memo.loads || 0) + parseInt(row['type'] === 'load' ? 1 : 0);
-  memo.displays =
-    (memo.displays || 0) + parseInt(row['type'] === 'display' ? 1 : 0);
-  memo.loadRate = parseFloat(memo.loads / memo.impressions) * 100;
-  memo.displayRate = parseFloat(memo.displays / memo.loads) * 100;
-  return memo;
+var reduce = function(row, payload) {
+  payload.impressions =
+    (payload.impressions || 0) + parseInt(row['type'] === 'impression' ? 1 : 0);
+  payload.loads =
+    (payload.loads || 0) + parseInt(row['type'] === 'load' ? 1 : 0);
+  payload.displays =
+    (payload.displays || 0) + parseInt(row['type'] === 'display' ? 1 : 0);
+  payload.loadRate = parseFloat(payload.loads / payload.impressions) * 100;
+  payload.displayRate = parseFloat(payload.displays / payload.loads) * 100;
+  return payload;
 };
 
 var calculations = [
