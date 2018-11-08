@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "budo index.js -p 6896 -l -- -t sheetify/transform -t [ babelify --presets [ react es2015 ] ]"
+    "dev": "budo index.js -l -- -t sheetify/transform -t [ babelify --presets [ react es2015 ] ]"
   },
   "keywords": [],
   "author": "David Guttman <david@guttman.io> (http://davidguttman.com/)",
